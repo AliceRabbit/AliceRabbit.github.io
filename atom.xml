@@ -3,11 +3,11 @@
   <title>Compass&#39;s Blog</title>
   
   
-  <link href="/compass_blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="https://whitequeen.gitee.io/compass_blog/"/>
+  <link href="https://alicerabbit.github.io/"/>
   <updated>2020-02-11T10:16:09.164Z</updated>
-  <id>https://whitequeen.gitee.io/compass_blog/</id>
+  <id>https://alicerabbit.github.io/</id>
   
   <author>
     <name>Compass</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>此处的第一篇博客</title>
-    <link href="https://whitequeen.gitee.io/compass_blog/2020/02/10/hello-world/"/>
-    <id>https://whitequeen.gitee.io/compass_blog/2020/02/10/hello-world/</id>
+    <link href="https://alicerabbit.github.io/2020/02/10/hello-world/"/>
+    <id>https://alicerabbit.github.io/2020/02/10/hello-world/</id>
     <published>2020-02-10T11:58:48.770Z</published>
     <updated>2020-02-11T10:16:09.164Z</updated>
     
