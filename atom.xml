@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Compass&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://whitequeen.gitee.io/compass_blog/"/>
+  <updated>2020-02-11T10:16:09.164Z</updated>
+  <id>https://whitequeen.gitee.io/compass_blog/</id>
+  
+  <author>
+    <name>Compass</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>此处的第一篇博客</title>
+    <link href="https://whitequeen.gitee.io/compass_blog/2020/02/10/hello-world/"/>
+    <id>https://whitequeen.gitee.io/compass_blog/2020/02/10/hello-world/</id>
+    <published>2020-02-10T11:58:48.770Z</published>
+    <updated>2020-02-11T10:16:09.164Z</updated>
+    
+    <content type="html"><![CDATA[<p>写在这里的第一篇博客</p><a id="more"></a><h2 id="这个博客的起因"><a href="#这个博客的起因" class="headerlink" title="这个博客的起因"></a>这个博客的起因</h2><p>机缘巧合，这是一个特殊的新年，冠状病毒席卷华夏大地（都要从一个蝙蝠说起），我也被困在家里，思来想去不能干长肉啊！我要干点事情！又发现自己原来的博客各种意义上已经没法看了，所以决定从零开始建立一个新的博客——也就是这个。</p><p>说到底都怪那个没事吃蝙蝠的人。</p><p>先在这里立几个FLAG：</p><pre><code>+ 好好学习安卓开发，写出来一个拿的出手的APP+ 准备考研，但是还没想好考哪里+ 今年不当鸽子，把自己当年的旧账都收拾干净</code></pre><p>新年新气象，新博客也要确定一个全新的风貌！</p><p>BY Compass</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;写在这里的第一篇博客&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
