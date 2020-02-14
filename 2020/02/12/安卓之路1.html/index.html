@@ -21,14 +21,14 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png">
 <meta property="article:published_time" content="2020-02-12T14:54:28.438Z">
-<meta property="article:modified_time" content="2020-02-13T14:15:07.907Z">
+<meta property="article:modified_time" content="2020-02-14T05:08:56.822Z">
 <meta property="article:author" content="Compass">
 <meta property="article:tag" content="Android">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/css/style.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1581656625176">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1581656944187">-->
 
    
     <style>
@@ -217,7 +217,7 @@
   
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年02月12日</a>
-    <a><i class="nexmoefont icon-areachart"></i>758 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>754 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/">安卓学习</a>
@@ -237,10 +237,17 @@
 <a id="more"></a>
 
 <h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><p>Android可分为四层架构，五块区域。</p>
-<pre><code>1. LINUX内核层——提供硬件的底层驱动
- 2. 系统运行层——提供系统的主要特性支持，Android运行时库也在这一层，提供了一些核心库，允许开发者使用Java语言编写Android应用
- 3. 应用框架层——提供构建应用程序时可能用到的API
- 4. 应用层</code></pre><p><img data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png" alt="四层架构" class="lazyload"></p>
+<ul>
+<li><p>LINUX内核层——提供硬件的底层驱动</p>
+</li>
+<li><p>系统运行层——提供系统的主要特性支持，Android运行时库也在这一层，提供了一些核心库，允许开发者使用Java语言编写Android应用</p>
+</li>
+<li><p>应用框架层——提供构建应用程序时可能用到的API</p>
+</li>
+<li><p>应用层</p>
+</li>
+</ul>
+<p><img data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png" alt="四层架构" class="lazyload"></p>
 <h2 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h2><p>一般情况下，活动继承自AppCompatActivity，onCreate()方法继承自父类，我们实现功能则多是通过对这个方法的重写来实现。</p>
 <p>所有活动需要在AndroidManifest.xml中注册才能生效，活动声明放在&lt;application&gt;标签内，通过&lt;activity&gt;标签对活动进行注册。</p>
 <blockquote>
@@ -333,7 +340,7 @@ protected void onCreate(Bundle savedInstanceState){
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1581656625179"></script>-->
+<!--<script src="/js/app.js?v=1581656944189"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
