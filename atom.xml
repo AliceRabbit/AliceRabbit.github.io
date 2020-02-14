@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://alicerabbit.github.io/"/>
-  <updated>2020-02-12T07:55:22.079Z</updated>
+  <updated>2020-02-13T14:15:07.907Z</updated>
   <id>https://alicerabbit.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓之路·1</title>
+    <link href="https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/"/>
+    <id>https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/</id>
+    <published>2020-02-12T14:54:28.438Z</published>
+    <updated>2020-02-13T14:15:07.907Z</updated>
+    
+    <content type="html"><![CDATA[<p>开始了~</p><a id="more"></a><h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><p>Android可分为四层架构，五块区域。</p><pre><code>1. LINUX内核层——提供硬件的底层驱动 2. 系统运行层——提供系统的主要特性支持，Android运行时库也在这一层，提供了一些核心库，允许开发者使用Java语言编写Android应用 3. 应用框架层——提供构建应用程序时可能用到的API 4. 应用层</code></pre><p><img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png" alt="四层架构"></p><h2 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h2><p>一般情况下，活动继承自AppCompatActivity，onCreate()方法继承自父类，我们实现功能则多是通过对这个方法的重写来实现。</p><p>所有活动需要在AndroidManifest.xml中注册才能生效，活动声明放在&lt;application&gt;标签内，通过&lt;activity&gt;标签对活动进行注册。</p><blockquote><p>如何配置主活动？</p><p>在&lt;activity&gt;标签内加入&lt;intent-filter&gt;标签，并在这个标签内添加</p><p>&lt;action android:name=”android.intent.action.MAIN”/&gt;</p><p>&lt;category android:name=”android.intent.category.LAUNCHER”/&gt;</p></blockquote><p>销毁一个活动：Activity类提供了一个finish()方法，通过调用这个方法可以销毁当前活动</p><h3 id="活动状态"><a href="#活动状态" class="headerlink" title="活动状态"></a>活动状态</h3><p>活动在生命周期中最多可能有四种状态：</p><blockquote><p>运行状态</p><p>暂停状态</p><p>停止状态</p><p>销毁状态</p></blockquote><p>Activity类中定义了7个回调方法：</p><ul><li>onCreate()。会在活动第一次被创建时调用，完成活动的初始化。</li><li>onStart()。在活动由不可见变为可见时调用。</li><li>onResum()。在活动准备好和用户交互时调用。</li><li>onPause()。当系统准备去启动或回复另一个活动时调用。</li><li>onStop()。当活动完全不可见时调用。</li><li>onDestroy()。在活动被销毁之前调用，之后的活动状态为销毁状态。</li><li>onRestat()。这个方法在活动由停止状态变为运行状态之前调用。</li></ul><blockquote><p>如何保证在活动被回收后，恢复活动的状态？</p><p>Activity提供了onSaveInstanceState()回调方法临时保存数据。</p><p>onSaveInstanceState()方法可以携带一个Bundle类型的参数，Bundle提供了一系列方法用于保存数据，名保存方法需要传入两个参数，第一个参数是键（用于取回值），第二个是需要保存的参数。</p><p>保存代码实例如下：</p><pre><code class="java">@Overrideprotected void onSaveInstanceState(Bundle outState){    super.onSaveInstanceState(outState);    String tempData = &quot;Someting you just typed&quot;;    outState.putString(&quot;data_key&quot;,tempData);}</code></pre><p>恢复数据的代码应当写在onCreate()方法，如下所示</p><pre><code class="java">@Overrideprotected void onCreate(Bundle savedInstanceState){    super.onCreate(savedInstanceState);    setContentView(R.layout.activity_main);    if (saveInstanceState != null){        String tempData = savedInstanceState.getString(&quot;data_key&quot;);    }}</code></pre><p>这里传递数据的方式和Intent传递信息的方式是十分类似的。</p></blockquote><h3 id="活动的启动方式"><a href="#活动的启动方式" class="headerlink" title="活动的启动方式"></a>活动的启动方式</h3><p>有四种启动方式</p><ul><li>standard</li><li>singleTop</li><li>singleTask</li><li>singleInstance</li></ul><p>具体的区别这里不再阐述</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>发现拾起来要比第一次学顺畅不少，当时许多无法理解的点也都很容易的理解了，不过效率还要提升！马上开始上网课了，考虑用水课的时间拿来学Android（？好孩子不要学）、</p><p>希望这是一个好的开始，能够坚持下去！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开始了~&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="安卓学习" scheme="https://alicerabbit.github.io/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Android" scheme="https://alicerabbit.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>重走安卓路</title>
