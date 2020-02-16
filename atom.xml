@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://alicerabbit.github.io/"/>
-  <updated>2020-02-14T05:08:56.822Z</updated>
+  <updated>2020-02-16T14:19:51.221Z</updated>
   <id>https://alicerabbit.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓之路2</title>
+    <link href="https://alicerabbit.github.io/2020/02/15/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF%C2%B72/"/>
+    <id>https://alicerabbit.github.io/2020/02/15/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF%C2%B72/</id>
+    <published>2020-02-15T14:02:20.968Z</published>
+    <updated>2020-02-16T14:19:51.221Z</updated>
+    
+    <content type="html"><![CDATA[<p>安卓学习的第二篇内容</p><a id="more"></a><h2 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h2><p>Intent是在活动之间跳转不可少的方法</p><h3 id="显式Intent"><a href="#显式Intent" class="headerlink" title="显式Intent"></a>显式Intent</h3><p>Intent是Android中组件之间进行交互的重要方式，不仅可以指明当前组件想要执行的动作，还可以在不同组件之间传递数据。</p><p>Intent可大致分为两种显式Intent和隐式Intent，先来学习显式Intent的使用。</p><p>Intent有多个构造函数的重载，其中一个是Intent(Context packageContext, Class&lt;?&gt; cls)，构造函数接受两个参数，Context参数要求提供一个启动活动的上下文，第二个参数Class则是指定想要启动的目标活动。</p><p>在使用Intent是，Activity类提供了一个startActivity()方法，这个方法是专门用于启动活动的，该方法接收Intent，将构建好的Intent传入方法即可启动目标活动。</p><h3 id="隐式Intent"><a href="#隐式Intent" class="headerlink" title="隐式Intent"></a>隐式Intent</h3><p>隐式Intent不指明我们想启动哪一个活动，而指定一些列action和category等信息，然后交由系统区分写这个Intent，找出合适的活动去启动。（合适的活动是什么？A：可以响应Intent的活动）</p><p>通过配置&lt;activity&gt;标签下的&lt;intent-filter&gt;，可以指定当前活动可以响应的action和category：</p><pre><code class="xml">        &lt;activity android:name=&quot;.SecondActivity&quot;&gt;            &lt;intent-filter&gt;                &lt;action android:name=&quot;com.compass.demo.ACTION_START&quot;/&gt;                &lt;category android:name=&quot;android.intent.category.DEFAULT&quot;/&gt;            &lt;/intent-filter&gt;        &lt;/activity&gt;</code></pre><p>这种配置使SecondActivity活动可以响应action为<code>com.compass.demo.ACTION_START</code>且category为<code>android.intent.category.DEFAULT</code>的活动。</p><p>通过隐式Intent还可以实现调用其他程序的活动的目的，利用这种功能可以实现浏览网页等功能。</p><h3 id="向下一个活动传递数据"><a href="#向下一个活动传递数据" class="headerlink" title="向下一个活动传递数据"></a>向下一个活动传递数据</h3><p>Intent提供了一系列putExtra()方法的重载，可以把我们向传递的数据暂存在Intent中，启动了另一个活动之后，只需要把这些数据再从Intent中取出来就可以了！下面是一个传递字符串的例子：</p><pre><code class="java">//传递部分，位于发起活动button1.setOnClick(new View.OnclickListener(){    @Override    public void onClick(View v){        String data = &quot;Compass forever！&quot;;        Intent intent = new Intent(FirstActivity.this, SecondActivity.class);        intent.putExtra(&quot;extra_data&quot;, data);        startActivity(intent);    }});//接收部分，位于目的活动public class SecondActivity extends AppCompatActivity{    @Override    protected void onCreat(Bundle savedInstanceState){        super.onCreate(savedInstanceState);        setContentView(R.layout.second_layout);        Intent intent = getIntent();        String data = intent.getStringExtra(&quot;extra_data&quot;);        Log.d(&quot;SecondActivity&quot;,data);    }}</code></pre><p>getStringExtra()用于接收字符串</p><p>getIntExtra()用于接收整型数据</p><p>getBooleanExtra()接收布尔型数据</p><h3 id="返回数据给上一个活动"><a href="#返回数据给上一个活动" class="headerlink" title="返回数据给上一个活动"></a>返回数据给上一个活动</h3><p><code>startActivityForResult()</code>方法可以满足我们在下个活动销毁时返回结果给上一个活动的需求。这个方法接收两个参数，第一个参数是intent，第二个参数是请求码（用于在回调中判断数据的来源）。</p><p>使用这种方法启动活动，需要在被启动的活动内构建一个Intent，在这里这个Intent仅仅用于传递数据而已。我们通过putExtra()将要传递的数据存放在Intent中，然后调用setResult()方法，setResult方法接收两个参数，第一个参数用于向上一个活动返回处理结果，一般只使用RESULT_OK或RESULT_CANCELED这两个值，第二个参数则把带有数据的Intent传递回去。</p><p>在原活动中重写<code>onActivityResult()</code>方法来获取返回的数据，如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200216221126.png" alt=""></p><p>onActivityResult()方法带有三个参数，第一个参数requestCode是启动时传入的请求码，第二个参数resultCode是我们返回数据时传入的处理结果，第三个参数则是携带着返回数据的Intent。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这次主要学习了Intent相关的知识，考虑到明天（2020.2.17）就要开启网课的第一天了，所以这次的内容可能会稍微少一点点。</p><p>按照学习进度，接下来应该是要学习活动的生命周期相关的知识了，这是很重要的一部分，所以我可能会用很大的篇幅来记录学习过程。加油！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;安卓学习的第二篇内容&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="安卓学习" scheme="https://alicerabbit.github.io/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Android" scheme="https://alicerabbit.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>安卓之路·1</title>
