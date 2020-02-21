@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://alicerabbit.github.io/"/>
-  <updated>2020-02-16T14:19:51.221Z</updated>
+  <updated>2020-02-21T11:43:40.119Z</updated>
   <id>https://alicerabbit.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android中活动的生命周期</title>
+    <link href="https://alicerabbit.github.io/2020/02/21/Android%E4%B8%AD%E6%B4%BB%E5%8A%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>https://alicerabbit.github.io/2020/02/21/Android%E4%B8%AD%E6%B4%BB%E5%8A%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</id>
+    <published>2020-02-21T11:43:40.119Z</published>
+    <updated>2020-02-21T11:43:40.119Z</updated>
+    
+    <content type="html"><![CDATA[<p>Activity的生命周期是安卓开发中很重要的一个点，也是在面试中经常会被问到的一点，属于需要好好了解的一部分知识</p><a id="more"></a><p>首先在这里安利一下Google官方的开发者文档，虽然是繁体中文但是大致上不影响阅读，可能需要科学上网——<a href="https://developer.android.google.cn/guide/components/activities/" target="_blank" rel="noopener">https://developer.android.google.cn/guide/components/activities/</a> ，在这里Google详细讲述了安卓活动相关的种种细节，希望在通过各种书籍视频学习时也一定要阅读这部分内容！</p><h2 id="活动状态"><a href="#活动状态" class="headerlink" title="活动状态"></a>活动状态</h2><p>在《第一行代码》第2版中将活动分为四种状态：</p><ol><li>运行状态</li><li>暂停状态</li><li>停止状态</li><li>销毁状态</li></ol><p>而在官方文档中，将活动分为三种状态：</p><ol><li>已继续</li><li>已暂停</li><li>已停止</li></ol><p>其实本质上相同，只是官方文档认为活动销毁后便不再算入生命周期。</p><p>当活动处在屏幕最前端且具有使用者焦点时，认为活动处于运行状态；当活动失去焦点，但仍然可见，即上层覆盖一个并不占用全屏幕的活动时进入暂停状态；当活动完全不可见（被另外一个活动完全遮挡）但仍存在于内存中时处于停滞状态。对于暂停或停止的活动，可以调用finish()方法销毁，使其在内存中清除。</p><h2 id="活动的生命周期回调"><a href="#活动的生命周期回调" class="headerlink" title="活动的生命周期回调"></a>活动的生命周期回调</h2><p>Activity类定义了7个回调方法：</p><pre><code class="java">public class ExampleActivity extends Activity {    @Override    public void onCreate(Bundle savedInstanceState) {        super.onCreate(savedInstanceState);        // 活动被创建时调用    }    @Override    protected void onStart() {        super.onStart();        // 活动由不可见变成可见时调用    }    @Override    protected void onResume() {        super.onResume();        // 当活动准备好与用户交互时调用（活动本身处于运行状态）    }    @Override    protected void onPause() {        super.onPause();        // 当另一个活动获得焦点时调用，在这个方法中将一些消耗CPU的资源释放，保存一些关键数据，但执行速度要快，不能影响到新的栈顶活动    }    @Override    protected void onStop() {        super.onStop();        // 当活动完全不可见时调用    }    @Override    protected void onDestroy() {        super.onDestroy();        // 程序销毁前执行    }}</code></pre><p>活动的生存期可以分为三部分：</p><blockquote><p>完整生存期：onCreate()和onDestory()方法之间</p><p>可见生存期：位于onStart()和onStop()方法之间，在这个生存期内活动对于用户总是可见的，但有可能无法与用户交互（焦点不聚焦在本活动）</p><p>前台生存期：onResume()方法和onPause()方法之间所经历的就是前台生存期，这个时期活动总是可以与用户交互</p></blockquote><p>下面是谷歌官方提供的活动生命周期的示意图：</p><p><img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/activity_lifecycle.png" alt=""></p><h3 id="活动被回收了怎么办？"><a href="#活动被回收了怎么办？" class="headerlink" title="活动被回收了怎么办？"></a>活动被回收了怎么办？</h3><p>如果想要在活动被回收后恢复活动需要使用onSaveInstanceState()方法，这个方法携带一个Bundle类型的参数，Bundle提供了一系列用于保存数据的方法，每个保存方法需要传入两个值——键（用于取回值）和需要保存的内容。</p><p>保存的数据如何恢复？</p><p>大家可能以及注意到在onCreate()方法中有Bundle类型的参数，在一般情况下这个参数为NULL，但是如果活动被回收前有通过onSaveInstanceState()方法保存数据，我们可以通过相应的取值方法将数据取出。</p><blockquote><p><strong>Tips</strong></p><p>官方文档中提到，即使没有主动采取数据保存，Activity的某些状态也会由预设 <code>onSaveInstanceState()</code> 实例还原。具体来说，预设实例会针对页面配置中的每一个View调用对应的 <code>onSaveInstanceState()</code>方法，UI中可见的变更都会自动保存，并在Activity重新构建时还原（如果组件没有ID，则系统无法储存其状态）。</p><p>如果想要禁用自动储存，只需要将android:saveEnabled设为”false”。</p></blockquote><h3 id="一些活动会重新构建的特殊情况"><a href="#一些活动会重新构建的特殊情况" class="headerlink" title="一些活动会重新构建的特殊情况"></a>一些活动会重新构建的特殊情况</h3><p>当某些系统设置在程序运行阶段进行变更时（例如：屏幕方向、键盘可用性、语言）。针对这些情况应该考虑到数据存储和恢复。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>好想出去玩！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Activity的生命周期是安卓开发中很重要的一个点，也是在面试中经常会被问到的一点，属于需要好好了解的一部分知识&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="安卓学习" scheme="https://alicerabbit.github.io/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Android" scheme="https://alicerabbit.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>安卓之路2</title>
@@ -44,7 +67,7 @@
     <link href="https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/"/>
     <id>https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/</id>
     <published>2020-02-12T14:54:28.438Z</published>
-    <updated>2020-02-14T05:08:56.822Z</updated>
+    <updated>2020-02-18T02:46:26.627Z</updated>
     
     <content type="html"><![CDATA[<p>开始了~</p><a id="more"></a><h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><p>Android可分为四层架构，五块区域。</p><ul><li><p>LINUX内核层——提供硬件的底层驱动</p></li><li><p>系统运行层——提供系统的主要特性支持，Android运行时库也在这一层，提供了一些核心库，允许开发者使用Java语言编写Android应用</p></li><li><p>应用框架层——提供构建应用程序时可能用到的API</p></li><li><p>应用层</p></li></ul><p><img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png" alt="四层架构"></p><h2 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h2><p>一般情况下，活动继承自AppCompatActivity，onCreate()方法继承自父类，我们实现功能则多是通过对这个方法的重写来实现。</p><p>所有活动需要在AndroidManifest.xml中注册才能生效，活动声明放在&lt;application&gt;标签内，通过&lt;activity&gt;标签对活动进行注册。</p><blockquote><p>如何配置主活动？</p><p>在&lt;activity&gt;标签内加入&lt;intent-filter&gt;标签，并在这个标签内添加</p><p>&lt;action android:name=”android.intent.action.MAIN”/&gt;</p><p>&lt;category android:name=”android.intent.category.LAUNCHER”/&gt;</p></blockquote><p>销毁一个活动：Activity类提供了一个finish()方法，通过调用这个方法可以销毁当前活动</p><h3 id="活动状态"><a href="#活动状态" class="headerlink" title="活动状态"></a>活动状态</h3><p>活动在生命周期中最多可能有四种状态：</p><blockquote><p>运行状态</p><p>暂停状态</p><p>停止状态</p><p>销毁状态</p></blockquote><p>Activity类中定义了7个回调方法：</p><ul><li>onCreate()。会在活动第一次被创建时调用，完成活动的初始化。</li><li>onStart()。在活动由不可见变为可见时调用。</li><li>onResum()。在活动准备好和用户交互时调用。</li><li>onPause()。当系统准备去启动或回复另一个活动时调用。</li><li>onStop()。当活动完全不可见时调用。</li><li>onDestroy()。在活动被销毁之前调用，之后的活动状态为销毁状态。</li><li>onRestat()。这个方法在活动由停止状态变为运行状态之前调用。</li></ul><blockquote><p>如何保证在活动被回收后，恢复活动的状态？</p><p>Activity提供了onSaveInstanceState()回调方法临时保存数据。</p><p>onSaveInstanceState()方法可以携带一个Bundle类型的参数，Bundle提供了一系列方法用于保存数据，名保存方法需要传入两个参数，第一个参数是键（用于取回值），第二个是需要保存的参数。</p><p>保存代码实例如下：</p><pre><code class="java">@Overrideprotected void onSaveInstanceState(Bundle outState){    super.onSaveInstanceState(outState);    String tempData = &quot;Someting you just typed&quot;;    outState.putString(&quot;data_key&quot;,tempData);}</code></pre><p>恢复数据的代码应当写在onCreate()方法，如下所示</p><pre><code class="java">@Overrideprotected void onCreate(Bundle savedInstanceState){    super.onCreate(savedInstanceState);    setContentView(R.layout.activity_main);    if (saveInstanceState != null){        String tempData = savedInstanceState.getString(&quot;data_key&quot;);    }}</code></pre><p>这里传递数据的方式和Intent传递信息的方式是十分类似的。</p></blockquote><h3 id="活动的启动方式"><a href="#活动的启动方式" class="headerlink" title="活动的启动方式"></a>活动的启动方式</h3><p>有四种启动方式</p><ul><li>standard</li><li>singleTop</li><li>singleTask</li><li>singleInstance</li></ul><p>具体的区别这里不再阐述</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>发现拾起来要比第一次学顺畅不少，当时许多无法理解的点也都很容易的理解了，不过效率还要提升！马上开始上网课了，考虑用水课的时间拿来学Android（？好孩子不要学）、</p><p>希望这是一个好的开始，能够坚持下去！</p>]]></content>
     
