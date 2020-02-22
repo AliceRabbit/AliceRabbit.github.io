@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-
-<html lang="zh-CN">
+<html>
 
 <head>
   
   <title>links - Compass&#39;s Blog</title>
   <meta charset="UTF-8">
   <meta name="description" content="永远指着前方的罗盘留下的痕迹">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
 
@@ -25,9 +24,11 @@
 <meta property="article:author" content="Compass">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blank-vax.github.io/uploads/picture.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1582287781699">-->
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1582335587676">
 
    
     <style>
@@ -47,10 +48,10 @@
     <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/6a0b84cad1c8a7867974d6836509c93d71cf50f1 (2).jpg)"></div>
     <div class="mdui-appbar mdui-shadow-0">
       <div class="mdui-toolbar">
-        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
         <div class="mdui-toolbar-spacer"></div>
         <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-        <a href="/" title="Compass" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/186583_0eOYRgWW.png" alt="Compass"></a>
+        <a href="/" title="Compass" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/186583_0eOYRgWW.png"></a>
        </div>
     </div>
   </div>
@@ -58,7 +59,7 @@
       <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
         <a href="/" title="Compass">
-            <img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/186583_0eOYRgWW.png" alt="Compass" alt="Compass">
+            <img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/186583_0eOYRgWW.png" alt="Compass">
         </a>
     </div>
     <div class="nexmoe-count">
@@ -66,7 +67,7 @@
         <div><span>标签</span>2</div>
         <div><span>分类</span>2</div>
     </div>
-    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
         <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
             <i class="mdui-list-item-icon nexmoefont icon-home"></i>
@@ -96,13 +97,13 @@
             </div>
         </a>
         
-    </div>
+    </ul>
     <aside id="nexmoe-sidebar">
   
   <div class="nexmoe-widget-wrap">
     <div class="nexmoe-widget nexmoe-search">
         <form id="search_form" action_e="https://cn.bing.com/search?q=site:alicerabbit.github.io" onsubmit="return search();">
-            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            <input id="search_value" name="q" type="search" placeholder="搜索">
         </form>
     </div>
 </div>
@@ -297,9 +298,12 @@
 
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1582287781701"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+<script src="/js/app.js?v=1582335587680"></script>
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
