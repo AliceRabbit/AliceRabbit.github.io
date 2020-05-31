@@ -1,248 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  
-  <title>安卓之路·1 - Compass&#39;s Blog</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="永远指着前方的罗盘留下的痕迹">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-
-  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/previe.png" type="image/png" />
-  <meta name="description" content="开始了~">
-<meta property="og:type" content="article">
-<meta property="og:title" content="安卓之路·1">
-<meta property="og:url" content="https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/index.html">
-<meta property="og:site_name" content="Compass&#39;s Blog">
-<meta property="og:description" content="开始了~">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png">
-<meta property="article:published_time" content="2020-02-12T14:54:28.438Z">
-<meta property="article:modified_time" content="2020-02-18T02:46:26.627Z">
-<meta property="article:author" content="Compass">
-<meta property="article:tag" content="Android">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
-  
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1582336691916">
-
-   
-    <style>
-      .nexmoe-avatar img:hover {
-        -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-      }	
-    </style>
-  
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Compass's Blog" type="application/atom+xml">
-</head>
-
-<body class="mdui-drawer-body-left">
-  
-  <div id="nexmoe-background">
-    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/6a0b84cad1c8a7867974d6836509c93d71cf50f1 (2).jpg)"></div>
-    <div class="mdui-appbar mdui-shadow-0">
-      <div class="mdui-toolbar">
-        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-        <div class="mdui-toolbar-spacer"></div>
-        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-        <a href="/" title="Compass" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/186583_0eOYRgWW.png"></a>
-       </div>
-    </div>
-  </div>
-  <div id="nexmoe-header">
-      <div class="nexmoe-drawer mdui-drawer" id="drawer">
-    <div class="nexmoe-avatar mdui-ripple">
-        <a href="/" title="Compass">
-            <img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/186583_0eOYRgWW.png" alt="Compass">
-        </a>
-    </div>
-    <div class="nexmoe-count">
-        <div><span>文章</span>5</div>
-        <div><span>标签</span>2</div>
-        <div><span>分类</span>2</div>
-    </div>
-    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
-            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
-            <div class="mdui-list-item-content">
-                回到首页
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
-            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
-            <div class="mdui-list-item-content">
-                文章归档
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
-            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
-            <div class="mdui-list-item-content">
-                关于博客
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/DALAOs.html" title="大佬们">
-            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
-            <div class="mdui-list-item-content">
-                大佬们
-            </div>
-        </a>
-        
-    </ul>
-    <aside id="nexmoe-sidebar">
-  
-  <div class="nexmoe-widget-wrap">
-    <div class="nexmoe-widget nexmoe-search">
-        <form id="search_form" action_e="https://cn.bing.com/search?q=site:alicerabbit.github.io" onsubmit="return search();">
-            <input id="search_value" name="q" type="search" placeholder="搜索">
-        </form>
-    </div>
-</div>
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">社交按钮</h3>
-    <div class="nexmoe-widget nexmoe-social">
-        <a class="mdui-ripple" href="https://space.bilibili.com/933859" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
-            <i class="nexmoefont icon-bilibili"></i>
-        </a><a class="mdui-ripple" href="https://github.com/AliceRabbit" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
-            <i class="nexmoefont icon-github"></i>
-        </a><a class="mdui-ripple" href="/atom.xml" target="_blank" mdui-tooltip="{content: 'RSS'}" style="color: rgb(247,132,34);background-color: rgba(247,132,34,.1);">
-            <i class="nexmoefont icon-rss"></i>
-        </a>
-    </div>
-</div>
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">文章分类</h3>
-    <div class="nexmoe-widget">
-
-      <ul class="category-list">
-
-        
-
-
-        
-
-        
-
-        <li class="category-list-item">
-          <a class="category-list-link" href="/categories/安卓学习/">安卓学习</a>
-          <span class="category-list-count">4</span>
-        </li>
-
-        
-
-        <li class="category-list-item">
-          <a class="category-list-link" href="/categories/安卓学习/杂谈/">杂谈</a>
-          <span class="category-list-count">1</span>
-        </li>
-
-        
-      </ul>
-
-    </div>
-  </div>
-
-
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">标签云</h3>
-    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/" style="font-size: 10px;">胡言乱语</a>
-    </div>
-    
-  </div>
-
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">文章归档</h3>
-    <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">最新文章</h3>
-    <div class="nexmoe-widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/02/21/Android%E4%B8%AD%E6%B4%BB%E5%8A%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">Android中活动的生命周期</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/15/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF%C2%B72/">安卓之路2</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/">安卓之路·1</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/12/%E9%87%8D%E8%B5%B0%E5%AE%89%E5%8D%93%E8%B7%AF.html/">重走安卓路</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/10/hello-world/">此处的第一篇博客</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-    <div class="nexmoe-copyright">
-        &copy; 2020 Compass
-        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
-    </div>
-</div><!-- .nexmoe-drawer -->
-  </div>
-  <div id="nexmoe-content">
-    <div class="nexmoe-primary">
-        <div class="nexmoe-post">
-  
-      <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 53.5%;"> 
-          <img data-src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/6a0b84cad1c8a7867974d6836509c93d71cf50f1 (2).jpg" data-sizes="auto" alt="安卓之路·1" class="lazyload">
-          <h1>安卓之路·1</h1>
-      </div>
-  
-  <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2020年02月12日</a>
-    <a><i class="nexmoefont icon-areachart"></i>754 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
-    
-      <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/">安卓学习</a>
-    
-    
-      <a class="nexmoefont icon-tag-fill -link" href="/tags/Android/" rel="tag">Android</a>
-    
-    
-  </div>
-
-  <div class="nexmoe-post-right">
-    
-  </div>
-
-  <article>
-    <p>开始了~</p>
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>安卓之路·1 - Compass&#039;s Blog</title><meta description="开始了~"><meta property="og:type" content="blog"><meta property="og:title" content="安卓之路·1"><meta property="og:url" content="https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/"><meta property="og:site_name" content="Compass"><meta property="og:description" content="开始了~"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png"><meta property="article:published_time" content="2020-02-12T14:54:28.438Z"><meta property="article:modified_time" content="2020-02-18T02:46:26.627Z"><meta property="article:author" content="Compass"><meta property="article:tag" content="Android"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/"},"headline":"Compass's Blog","image":["https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png"],"datePublished":"2020-02-12T14:54:28.438Z","dateModified":"2020-02-18T02:46:26.627Z","author":{"@type":"Person","name":"Compass"},"description":"开始了~"}</script><link rel="canonical" href="https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><link rel="alternate" href="/atom.xml" title="Compass's Blog" type="application/atom+xml">
+</head><body class="is-2-column"><script type="text/javascript" src="/js/imaegoo/night.js"></script><canvas id="universe"></canvas><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img class="logo-img" src="/" alt="Compass&#039;s Blog" height="28"><img class="logo-img-dark" src="/" alt="Compass&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item night" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-02-12T14:54:28.438Z" title="2020-02-12T14:54:28.438Z">2020-02-12</time><span class="level-item"><a class="link-muted" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/">安卓学习</a></span><span class="level-item">5 分钟 读完 (大约 803 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">安卓之路·1</h1><div class="content"><p>开始了~</p>
 <a id="more"></a>
 
 <h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><p>Android可分为四层架构，五块区域。</p>
@@ -256,7 +14,7 @@
 <li><p>应用层</p>
 </li>
 </ul>
-<p><img data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png" alt="四层架构" class="lazyload"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AliceRabbit/ImgHosting/imgs/20200212161600.png" alt="四层架构"></p>
 <h2 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h2><p>一般情况下，活动继承自AppCompatActivity，onCreate()方法继承自父类，我们实现功能则多是通过对这个方法的重写来实现。</p>
 <p>所有活动需要在AndroidManifest.xml中注册才能生效，活动声明放在&lt;application&gt;标签内，通过&lt;activity&gt;标签对活动进行注册。</p>
 <blockquote>
@@ -315,68 +73,27 @@ protected void onCreate(Bundle savedInstanceState){
 <p>具体的区别这里不再阐述</p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>发现拾起来要比第一次学顺畅不少，当时许多无法理解的点也都很容易的理解了，不过效率还要提升！马上开始上网课了，考虑用水课的时间拿来学Android（？好孩子不要学）、</p>
 <p>希望这是一个好的开始，能够坚持下去！</p>
-
-  </article>
-  
-    
-<div class="nexmoe-post-copyright">
-<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
-<strong>本文作者：</strong>Compass<br>
-<strong>本文链接：</strong><a href="https://alicerabbit.github.io/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/" title="https:&#x2F;&#x2F;alicerabbit.github.io&#x2F;2020&#x2F;02&#x2F;12&#x2F;%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;alicerabbit.github.io&#x2F;2020&#x2F;02&#x2F;12&#x2F;%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html&#x2F;</a><br>
-
-  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-
-</div>
-
-
-  
-  <section class="nexmoe-comment">
-    <div class="valine"></div>
-<script src='https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js'></script>
-<script>
-    // 使用方法 https://valine.js.org/quickstart.html
-    new Valine({
-        el: '.valine',
-        appId: 'xGRPGL4pDGrRUfDl0ISNsbOT-gzGzoHsz',
-        appKey: 'eemeffk8wKQuCUqeDcjbWf4e'
-    })
-</script>
-</section>
-</div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
-
-<script src="/js/app.js?v=1582336691918"></script>
-
-
-    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
-
-
- 
-<script> 
-!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
-</script>
-
-  
-
-
-
-    <!-- Tencent Analytics -->
-<script>
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "//tajs.qq.com/stats?sId=66517096";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-
-
-
-</body>
-
-</html>
+</div><div class="article-tags size-small mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Android/">Android</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button is-info donate"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" href="/" style="background-color:rgba(255,128,62,.87);border-color:transparent;color:white;" target="_blank" rel="noopener"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button is-danger donate" href="/" target="_blank" rel="noopener"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button is-success donate"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/02/15/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF%C2%B72/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">安卓之路2</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/02/12/%E9%87%8D%E8%B5%B0%E5%AE%89%E5%8D%93%E8%B7%AF.html/"><span class="level-item">重走安卓路</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block line-height-inherit">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">2</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">安卓学习</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/%E6%9D%82%E8%B0%88/"><span class="level-start"><span class="level-item">杂谈</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-02-21T11:43:40.119Z">2020-02-21</time></p><p class="title is-6"><a class="link-muted" href="/2020/02/21/Android%E4%B8%AD%E6%B4%BB%E5%8A%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">Android中活动的生命周期</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/">安卓学习</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-02-15T14:02:20.968Z">2020-02-15</time></p><p class="title is-6"><a class="link-muted" href="/2020/02/15/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF%C2%B72/">安卓之路2</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/">安卓学习</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-02-12T14:54:28.438Z">2020-02-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/02/12/%E5%AE%89%E5%8D%93%E4%B9%8B%E8%B7%AF1.html/">安卓之路·1</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/">安卓学习</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-02-12T07:55:22.079Z">2020-02-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/02/12/%E9%87%8D%E8%B5%B0%E5%AE%89%E5%8D%93%E8%B7%AF.html/">重走安卓路</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/">安卓学习</a> / <a class="link-muted" href="/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/%E6%9D%82%E8%B0%88/">杂谈</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-02-10T11:58:48.770Z">2020-02-10</time></p><p class="title is-6"><a class="link-muted" href="/2020/02/10/hello-world/">此处的第一篇博客</a></p><p class="is-uppercase"></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/02/"><span class="level-start"><span class="level-item">二月 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/"><span class="tag">胡言乱语</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img class="logo-img" src="/" alt="Compass&#039;s Blog" height="28"><img class="logo-img-dark" src="/" alt="Compass&#039;s Blog" height="28"></a><p class="size-small"><span>&copy; 2020 Compass</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://alicerabbit.github.io',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script src="/js/imaegoo/universe.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
